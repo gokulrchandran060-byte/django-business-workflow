@@ -8,7 +8,7 @@ instead of simple CRUD operations.
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 - Python
 - Django
@@ -19,7 +19,7 @@ instead of simple CRUD operations.
 
 ---
 
-## 🧠 Core Concept
+##  Core Concept
 
 Tasks move through a predefined workflow:
 
@@ -29,7 +29,7 @@ Invalid transitions are blocked at the business logic layer.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 - RESTful APIs using Django REST Framework
 - Workflow state transitions with validation
@@ -41,7 +41,7 @@ Invalid transitions are blocked at the business logic layer.
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 Client  
 → Versioned API URLs (`/api/v1/`)  
@@ -52,7 +52,7 @@ Client
 
 ---
 
-## 🧩 ORM Usage Highlights
+##  ORM Usage Highlights
 
 This project makes explicit use of Django ORM features:
 
@@ -64,7 +64,7 @@ This project makes explicit use of Django ORM features:
 
 ---
 
-## 📡 API Endpoints (v1)
+##  API Endpoints (v1)
 
 | Method | Endpoint | Description |
 |------|--------|-------------|
@@ -76,18 +76,18 @@ This project makes explicit use of Django ORM features:
 
 ---
 
-## ⚠️ Workflow Rules
+##  Workflow Rules
 
-- CREATED → IN_PROGRESS ✅
-- IN_PROGRESS → DONE ✅
-- CREATED → DONE ❌
-- DONE → any ❌
+- CREATED → IN_PROGRESS (Accepted)
+- IN_PROGRESS → DONE (Accepted)
+- CREATED → DONE (Rejected)
+- DONE → any (Rejected)
 
 Invalid transitions return a clear error response.
 
 ---
 
-## 📊 Logging & Error Handling
+##  Logging & Error Handling
 
 - INFO logs for successful workflow actions
 - WARNING logs for invalid transitions
@@ -95,7 +95,7 @@ Invalid transitions return a clear error response.
 
 ---
 
-## 🚀 Project Focus
+##  Project Focus
 
 This project focuses on backend fundamentals, ORM usage,
 and business workflow enforcement.
